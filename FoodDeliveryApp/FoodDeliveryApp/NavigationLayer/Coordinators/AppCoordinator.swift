@@ -9,8 +9,8 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     override func start() {
-        //showOnboardingFlow()
-        showManinFlow()
+        showOnboardingFlow()
+//        showManinFlow()
     }
     
     override func finish() {
@@ -73,7 +73,7 @@ extension AppCoordinator: CoordinatorFinishDelegate {
         case .app:
             return
         default:
-            navigationController?.popViewController(animated: false)
+            navigationController?.popToRootViewController(animated: false)
         }
     }
 }
