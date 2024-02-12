@@ -28,6 +28,9 @@ class OnboardingPartViewController: UITabBarController {
             descriptionLabel.text = descriptionText
         }
     }
+    
+    var buttonText: String?
+    
     //MARK: - Views
     
     
@@ -40,6 +43,7 @@ class OnboardingPartViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+        tabBar.isHidden = true
     }
 }
 
@@ -94,5 +98,4 @@ private extension OnboardingPartViewController {
             descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -72)
         ])
     }
-    
 }
