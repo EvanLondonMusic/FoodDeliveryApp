@@ -14,6 +14,7 @@ struct SceneFactory {
         let onboardingCoordinator = OnboardingCoordinator(type: .onboarding, navigationController: navigationController, finishDelegate: finishDelagate)
         coordinator.addChildCoordinator(onboardingCoordinator)
         onboardingCoordinator.start()
+
     }
     
     

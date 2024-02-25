@@ -14,11 +14,13 @@ class AppCoordinator: Coordinator {
     
     override func start() {
 //        UserDefaults.standard.removeObject(forKey: "passedOnboarding")
-        if userStorage.passedOnboarding {
-            showManinFlow()
-        } else {
-            showOnboardingFlow()
-        }
+//        if userStorage.passedOnboarding {
+//            showMainFlow()
+//        } else {
+//            showOnboardingFlow()
+//        }
+        let loginVC = LoginViewController()
+        navigationController?.pushViewController(loginVC, animated: true)
     }
     
     override func finish() {
@@ -32,7 +34,7 @@ private extension AppCoordinator {
         guard let navigationController = navigationController else { return }
         factory.makeOnboardingFlow(coordinator: self, finishDelagate: self, navigationController: navigationController)
     }
-    func  showManinFlow() {
+    func  showMainFlow() {
         guard let navigationController = navigationController else { return }
         let tabBarController = factory.makeMainFlow(coordinator: self, finishDelegate: self)
         navigationController.pushViewController(tabBarController, animated: true)
@@ -46,7 +48,7 @@ extension AppCoordinator: CoordinatorFinishDelegate {
         switch childCoordinators.type {
         case .onboarding:
             navigationController?.viewControllers.removeAll()
-            showManinFlow()
+            showMainFlow()
         case .app:
             return
         default:
