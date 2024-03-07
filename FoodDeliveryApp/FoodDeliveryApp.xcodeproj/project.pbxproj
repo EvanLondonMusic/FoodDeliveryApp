@@ -29,6 +29,7 @@
 		780640252B66E4D100F559A1 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780640242B66E4D100F559A1 /* UIColor + Extension.swift */; };
 		780640272B66E5D000F559A1 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780640262B66E5D000F559A1 /* AppColors.swift */; };
 		7834E7C52B7D2F510055B8AD /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7834E7C42B7D2F510055B8AD /* SceneFactory.swift */; };
+		7838378B2B99C5CF001B3AF3 /* FDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7838378A2B99C5CF001B3AF3 /* FDButton.swift */; };
 		783CF1362B8B35AB00900A64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783CF1352B8B35AB00900A64 /* LoginViewController.swift */; };
 		783CF13B2B8B36DA00900A64 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783CF13A2B8B36DA00900A64 /* BottomView.swift */; };
 		78477E022B6EA6BB00429DA2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78477E012B6EA6BB00429DA2 /* OnboardingViewController.swift */; };
@@ -70,6 +71,7 @@
 		780640242B66E4D100F559A1 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		780640262B66E5D000F559A1 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		7834E7C42B7D2F510055B8AD /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
+		7838378A2B99C5CF001B3AF3 /* FDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDButton.swift; sourceTree = "<group>"; };
 		783CF1352B8B35AB00900A64 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		783CF13A2B8B36DA00900A64 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		78477E012B6EA6BB00429DA2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,31 @@
 			path = SceneFactory;
 			sourceTree = "<group>";
 		};
+		783837872B99C554001B3AF3 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				7834E7C32B7D2F380055B8AD /* SceneFactory */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		783837882B99C56C001B3AF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7838378A2B99C5CF001B3AF3 /* FDButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		783837892B99C587001B3AF3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				783CF1342B8B357400900A64 /* AuthScene */,
+				78477E002B6EA6A500429DA2 /* OnboardingScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		783CF1342B8B357400900A64 /* AuthScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,21 +248,21 @@
 		78477DFF2B6EA45B00429DA2 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
-				783CF1342B8B357400900A64 /* AuthScene */,
-				7834E7C32B7D2F380055B8AD /* SceneFactory */,
-				78477E002B6EA6A500429DA2 /* Onboarding */,
+				783837892B99C587001B3AF3 /* Scenes */,
+				783837882B99C56C001B3AF3 /* Views */,
+				783837872B99C554001B3AF3 /* Factory */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
 		};
-		78477E002B6EA6A500429DA2 /* Onboarding */ = {
+		78477E002B6EA6A500429DA2 /* OnboardingScene */ = {
 			isa = PBXGroup;
 			children = (
 				78477E012B6EA6BB00429DA2 /* OnboardingViewController.swift */,
 				78477E032B6EA6E900429DA2 /* OnboardingViewPresenter.swift */,
 				78477E052B6ED29E00429DA2 /* OnboardingPartViewController.swift */,
 			);
-			path = Onboarding;
+			path = OnboardingScene;
 			sourceTree = "<group>";
 		};
 		78DBBC8E2B6908CB00042605 /* NavigationLayer */ = {
@@ -379,6 +406,7 @@
 				7834E7C52B7D2F510055B8AD /* SceneFactory.swift in Sources */,
 				780640252B66E4D100F559A1 /* UIColor + Extension.swift in Sources */,
 				783CF13B2B8B36DA00900A64 /* BottomView.swift in Sources */,
+				7838378B2B99C5CF001B3AF3 /* FDButton.swift in Sources */,
 				78477E042B6EA6E900429DA2 /* OnboardingViewPresenter.swift in Sources */,
 				78DBBC922B69092600042605 /* Coordinator.swift in Sources */,
 			);
