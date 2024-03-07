@@ -99,7 +99,7 @@ private extension OnboardingViewController {
         view.addSubview(bottomButton)
         bottomButton.translatesAutoresizingMaskIntoConstraints = false
         bottomButton.action = buttonPressed
-        bottomButton.scheme = .gray
+        bottomButton.scheme = .grey
         
         NSLayoutConstraint.activate([
             bottomButton.bottomAnchor.constraint(equalTo: pageControl.bottomAnchor, constant: -44),

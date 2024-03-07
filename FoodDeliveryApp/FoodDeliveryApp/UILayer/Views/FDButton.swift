@@ -10,19 +10,19 @@ import UIKit
 enum FDButtonColorSchemes {
     case white
     case orange
-    case gray
+    case grey
 }
 
 class FDButton: UIView {
     
-    let button = UIButton()
+    private let button = UIButton()
     var action: (() -> Void)?
     var scheme: FDButtonColorSchemes = .white {
         didSet {
             setColorScheme(scheme: scheme)
         }
     }
-    
+
     init(scheme: FDButtonColorSchemes = .white) {
         super.init(frame: .zero)
         self.scheme = scheme
@@ -34,12 +34,12 @@ class FDButton: UIView {
     }
     
     private func setupLayout() {
-        self.backgroundColor = AppColors.background
+        self.backgroundColor = .clear
         setupButton()
     }
-    
+
     private func setupButton() {
-        self.addSubview(button)
+        addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = .Roboto.bold.size(of: 18)
         button.layer.cornerRadius = 24
@@ -51,7 +51,6 @@ class FDButton: UIView {
             button.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             button.topAnchor.constraint(equalTo: self.topAnchor)
         ])
-     
     }
     
     @objc private func buttonPressed() {
@@ -67,7 +66,7 @@ class FDButton: UIView {
         case .orange:
             button.backgroundColor = AppColors.accentOrange
             button.setTitleColor(AppColors.white, for: .normal)
-        case .gray:
+        case .grey:
             button.backgroundColor = AppColors.gray
             button.setTitleColor(AppColors.black, for: .normal)
         }
