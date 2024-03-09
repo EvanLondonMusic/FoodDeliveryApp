@@ -10,7 +10,7 @@ import UIKit
 enum FDButtonColorSchemes {
     case white
     case orange
-    case grey
+    case gray
 }
 
 class FDButton: UIView {
@@ -66,7 +66,7 @@ class FDButton: UIView {
         case .orange:
             button.backgroundColor = AppColors.accentOrange
             button.setTitleColor(AppColors.white, for: .normal)
-        case .grey:
+        case .gray:
             button.backgroundColor = AppColors.gray
             button.setTitleColor(AppColors.black, for: .normal)
         }

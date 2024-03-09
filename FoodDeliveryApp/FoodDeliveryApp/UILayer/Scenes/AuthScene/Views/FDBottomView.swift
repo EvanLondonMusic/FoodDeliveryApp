@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BottomView: UIView {
+class FDBottomView: UIView {
 
    private let label = UILabel()
     private let viewOne = UIView()
@@ -107,7 +107,7 @@ class BottomView: UIView {
     
 }
 
-private extension BottomView {
+private extension FDBottomView {
     @objc func buttonOneTapped() {
         buttonOneAction?()
     }
@@ -118,6 +118,6 @@ private extension BottomView {
 }
 
 #Preview("BottomView", traits: .fixedLayout(width: 400, height: 150)) {
-    BottomView()
+    FDBottomView()
     
 }
